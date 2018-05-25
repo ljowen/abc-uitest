@@ -12,6 +12,14 @@ exports.config = {
     specs: [
         './test/specs/**/*spec.js'
     ],
+    suites: {
+        login: [
+            './test/specs/news/news.spec.js'
+        ],
+        justin: [
+            './test/specs/news/news.spec.js'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         './test/pages/**/*.page.js'

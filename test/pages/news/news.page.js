@@ -9,7 +9,7 @@ export default class NewsPage extends Page {
         return browser.element('#n-justin > a');
     }
 
-    open() {
-        super.open('news');
+    open(slug) {
+        super.open(`news/${slug || ''}`);
     }
 }
