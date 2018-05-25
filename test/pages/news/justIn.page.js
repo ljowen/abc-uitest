@@ -6,7 +6,8 @@ export default class JustInPage extends NewsPage {
     }
 
     get articles() {
-        return browser.elements('ul.article-index > li').value
+        return browser.elements('ul.article-index > li')
+            .value
             .map(element => new JustInArticle(element))
     }
 

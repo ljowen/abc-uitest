@@ -18,9 +18,5 @@ describe('News Just In Page', () => {
             expect(article.timestamp.getText()).to.have.length.greaterThan(0);
             expect(article.text.getText()).to.have.length.greaterThan(0);
         })
-    })
-
-
-});/**
- * Created by lawrence on 25/05/18.
- */
+    });
+});
