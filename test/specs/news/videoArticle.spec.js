@@ -1,3 +1,5 @@
+import VideoArticlePage from '../../pages/news/videoArticle.page';
+
 const videoPage = new VideoArticlePage();
 import NEWS_ARTICLE_SAMPLES from '../../constants/news_articles';
 

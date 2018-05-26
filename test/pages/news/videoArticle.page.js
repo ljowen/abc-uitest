@@ -1,6 +1,10 @@
 import ArticlePage from './article.page';
 
 export default class VideoArticlePage extends ArticlePage {
+    get section() {
+        return browser.element('.article.section');
+    }
+
     get videoPlayer() {
         return this.section.element('.video video');
     }

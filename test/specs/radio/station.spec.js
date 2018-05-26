@@ -10,11 +10,11 @@ describe('A station page', () => {
     it('Shows a player with controls once playback starts', () => {
        expect(stationPage.playingPanel.isExisting());
        stationPage.playingPanel.click();
-       browser.waitUntil(_ => stationPage.playerControls.isExisting());
+       browser.waitUntil(() => stationPage.playerControls.isExisting());
        expect(stationPage.playerControls.isExisting());
        expect(stationPage.playBtn.isExisting());
        stationPage.playBtn.click();
-       browser.waitUntil(_ => stationPage.playerControls.element('.rp__controls__title').isExisting);
+       browser.waitUntil(() => stationPage.playerControls.element('.rp__controls__title').isExisting);
     });
 });
 
