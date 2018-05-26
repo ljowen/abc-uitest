@@ -10,7 +10,7 @@ const NEWS_ARTICLE_SAMPLES = {
         "type": ARTICLE_TYPES.VIDEO,
     },
     picOfTheWeek: {
-        "url": "2018-05-22/ebola-outbreak-treatment-from-qld-could-help-contain-virus/9784290",
+        "url": "2017-02-10/abc-open-pic-of-the-week/8256256",
         "type": ARTICLE_TYPES.GALLERY
     }
 };
