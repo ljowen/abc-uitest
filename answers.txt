@@ -1,0 +1,18 @@
+Section c)
+
+Q2: The best way to support multiple test targets would be to create multiple config files,
+    i.e. wdio.conf.dev.js, wdio.conf.staging.js as shown at http://webdriver.io/guide/testrunner/organizesuite.html
+    extending from a base config wdio.conf.js
+
+    In the case of switching urls, the baseUrl parameter should be modified per environment, and then care should be
+    taken that each test uses relative urls (i.e. browser.url('/news')).
+
+    A shell script could then read from an environment variable set and pick the config file:
+        "./node_modules/.bin/wdio wdio.conf.[ENVIRONMENT].js",
+
+Q3: While poking around I noticed the ABC API programs endpoint  http://program.abcradio.net.au/api/v1/programs
+    returns a list of (presumably) current programs. This endpoint could be queried each test run to generate a list of
+    program pages to test against (using the Program page model). This however might cause frustration if the list changes
+    regularly so instead a static list of programs to test against could be maintained, either as part of this repository
+    or as an external service. Where possible I've attempted to make my tests as generic as possible, but they could be improved
+    by removing hardcoded URLs and replacing them with the response from this endpoint.
