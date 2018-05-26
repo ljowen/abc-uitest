@@ -4,8 +4,8 @@ import ProgramPage from '../../pages/radio/program.page';
 const rnPage = new RNPage();
 const PROGRAM_NAME = 'The Economists';
 
-describe('News landing page', function() {
-    beforeEach(function() {
+describe('Radio National landing page', () => {
+    beforeEach(() => {
         rnPage.open();
     });
 

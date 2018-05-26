@@ -2,7 +2,7 @@ import Page from '../page';
 
 export default class Station extends Page {
     get playingPanel() {
-        return browser.element('.rp__playingItem__overlay');
+        return browser.element('.rp__playingItem__hero__primary');
     }
 
     get playerControls() {
