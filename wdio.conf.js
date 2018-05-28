@@ -51,9 +51,9 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 1,
+        maxInstances: 5,
         //
-        browserName: 'firefox'
+        browserName: 'chrome'
     }],
     //
     // ===================
@@ -127,6 +127,7 @@ exports.config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
+    services: ['selenium-standalone'],
     framework: 'mocha',
     //
     // Test reporter for stdout.
@@ -139,8 +140,8 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         compilers: ['js:babel-register'],
-        // timeout: 30000
-        timeout: 999999999
+        timeout: 30000
+        // timeout: 999999999
     },
     //
     // =====

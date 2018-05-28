@@ -33,9 +33,12 @@ describe('RN Program Episode Page', function() {
         browser.close();
     });
 
-    it('should direct to mp3 file when from link', () => {
+    it('should direct to mp3 file from link', () => {
        // @todo actually dl file to disk to check
-        programPage.downloadAudioLink.click();
-        expect(browser.getUrl()).to.equal(RADIO_PROGRAM_SAMPLES.bigIdeas.aFortunateUniverse.audio_link);
+       //  programPage.downloadAudioLink.click();
+        // expect(browser.getUrl()).to.equal(RADIO_PROGRAM_SAMPLES.bigIdeas.aFortunateUniverse.audio_link);
+
+        expect(programPage.downloadAudioLink.getAttribute('href'))
+            .to.equal(RADIO_PROGRAM_SAMPLES.bigIdeas.aFortunateUniverse.audio_link);
     });
 })

@@ -19,6 +19,8 @@ describe('Radio National landing page', () => {
     it('should allow clicking last item in program guide', () => {
         const lastProgramLink = rnPage.onAirSlider.lastProgram;
 
+        // This is overkill, @todo refactor to click until last program is visible
+        rnPage.onAirSlider.programs.forEach(() => rnPage.onAirSlider.nextArrow.click());
         // For some reason getText is not working here @todo fix
         const lastProgramHTML = lastProgramLink.element('div.program').getHTML();
         lastProgramLink.click();
